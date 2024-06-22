@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*
+   Form Style Sheet
+   Author:  William Meyers
+   Date:    2024-06-24
+   Filename:style.css
+
+   Color Scheme -- Offical OTC
+   https://news.otc.edu/media/uploads/2015/03/styleguide_new.pdf
+
+   Silver RGB: 153.153.153
+   Bright blue RGB: 0.110.255
+   Orange RGB: 255.140.0
+   Green RGB: 140.255.0
+   Magenta RGB: 204.0.255
+*/
+
+/* IMG Styles */
+
+header>img {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Styles */
+
+form {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Body Styles */
+
+body {
+    background-color: rgb(153, 153, 153);
+}
+
+/* Heading Styles */
+
+h1 {
+    text-align: center;
+    font: 3em sans-serif;
+}
+
+/* Legend Styles */
+
+legend {
+    background-color: rgba(204, 0, 255, 0.395);
+    color: rgb(0, 110, 255);
+    padding: 5px;
+    font: bold;
+    font-variant: small-caps;
+}
+
+/* Text Area Styles */
+
+textarea {
+    margin-top: 10px;
+    height: 50px;
+    width: 60%;
+    background-color: rgb(0, 110, 255);
+    color: rgb(255, 140, 0);
+}
+
+/* Validation Styles */
+
+input:valid{
+    background-color: chartreuse;
+}
+
+input:invalid{
+    background-color: rgb(233, 192, 192);
+}
+
+/* Form Button Styles */
+
+div#buttons {
+    text-align: center;
+    width: 100%;
+ }
+ 
+ input[type='submit'],
+ input[type='reset'] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 7px;
+    width: 25%;
+ }

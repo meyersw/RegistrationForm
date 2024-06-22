@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--
+      Lab: Registration Form
+      24/SU-CIS-130-W01
+      Author: William Meyers
+      Date:   2024-06-24
+      Filename:   form.html
+   -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Advising Registration Form</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="OTC-Wordmark-PMS295.webp" alt="OTC-Wordmark-PMS295">
+    </header>
+    <section>
+        <h1>Advising Request Form</h1>
+    </section>
+    <form id="survey" action="thankyou.html" method="get">
+
+        <!--3 Text Fields: First Name, Last Name, Email (all three of these should include html validation)-->
+
+        <fieldset id="contact">
+
+            <legend>Contact Information</legend>
+
+            <label for="firstName">First Name</label>
+            <input name="firstName" id="firstName" type="text" placeholder="first name" required>
+
+            <label for="lastName">Last Name</label>
+            <input name="lastName" id="lastName" type="text" placeholder="last name" required>
+
+            <label for="mail">E-mail</label>
+            <input name="Email" id="mail" type="email" placeholder="you@otc.edu" required>
+
+        </fieldset>
+        <fieldset id="request">
+
+            <legend>Reservation Request</legend>
+            <!-- 2 drop-down boxes-->
+
+            <!-- 1 that displays teacher names (Tiffany Ford, Kirsten Markley, Renee Riley)-->
+
+            <label for="advisor">Advisor</label>
+            <select name="advisor" id="advisor">
+                <option value="ReneeRiley">Tiffany Ford</option>
+                <option value="KirstenMarkley">Kirsten Markley</option>
+                <option value="ReneeRiley">Renee Riley</option>
+            </select>
+
+            <!-- One that displays all the months of the year-->
+
+            <label for="month">Month</label>
+            <select name="month" id="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <!-- 1 text box that scrolls through numbers, allowing the user to enter in only 1-31-->
+
+            <label for="day">Day</label>
+            <input name="day" id="day" type="number" value="" step="1" min="1" max="31" required>
+
+            <!--  2 radio buttons (one for am, one for pm) - make sure the user can ONLY type one or the other (hint: they will be mutually exclusive if you give them both the same name)-->
+
+            <label for="AM">AM</label>
+            <input name="AMPM" id="AM" value="AM" type="radio" required>
+            <label for="PM">PM</label>
+            <input name="AMPM" id="PM" value="PM" type="radio" required>
+
+        </fieldset>
+        <fieldset id="classes">
+
+            <legend>Classes you want to take next semester.</legend>
+            <!-- 5 check buttons showing the classes the user can choose from. They should be able to click on more than one -->
+
+            <input name="java" id="java" value="yes" type="checkbox">
+            <label for="java">Java</label>
+            <input name="C#" id="C#" value="yes" type="checkbox">
+            <label for="C#">C#</label>
+            <input name="webDev" id="webDev" value="yes" type="checkbox">
+            <label for="webDev">Web Dev</label>
+            <input name="database" id="database" value="yes" type="checkbox">
+            <label for="database">Database</label>
+            <input name="system" id="system" value="yes" type="checkbox">
+            <label for="system">System Analysis & Design</label>
+
+        </fieldset>
+
+
+        <fieldset id="addionalInfo">
+            <legend>Addional Information</legend>
+            <!--  1 Text area - a special kind of text box that allows users to enter in rows and columns (not just one row like a text box-->
+            <textarea name="addional" id="addional" placeholder="Any addional information. . . "></textarea>
+
+        </fieldset>
+
+        <!-- A Submit button that sends the form data to a new page-->
+        <div id="buttons">
+            <input type="submit" value="Submit My Request">
+            <input type="reset" value="Cancel">
+        </div>
+
+        <!--when the user clicks on the submit button, the thankyou.html page should display-->
+
+        <!--the data the user filled into the form all should be displayed (you do not have to edit the display of these fields, let javascript print out the key-value pairs) but you DO have to submit the data from your form correctly for the javascript to display your data-->
+
+    </form>
+
 </body>
+
 </html>
